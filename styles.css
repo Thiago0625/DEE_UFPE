@@ -683,6 +683,40 @@ footer {
     }
 }
 
+/* Adicione ao final do seu styles.css */
+@media (max-width: 600px) {
+  header .logo img {
+    max-height: 60px;
+  }
+  header .logo h1 {
+    font-size: 1rem;
+  }
+  .banner-content h2 {
+    font-size: 1.2rem;
+  }
+  .content-wrapper,
+  .footer-content {
+    flex-direction: column !important;
+    gap: 16px;
+  }
+  .container {
+    padding: 0 4px;
+  }
+  .page-title,
+  .section-title {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+  }
+  .image-content img,
+  .img-ajustada {
+    max-width: 100%;
+    height: auto;
+  }
+  nav ul li {
+    margin-left: 0;
+  }
+}
+
 /* Estilos para telas maiores que 768px (desktops) */
 @media screen and (min-width: 769px) {
     nav {
