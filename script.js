@@ -6,23 +6,24 @@
 // Esperar que o DOM esteja completamente carregado antes de executar o código
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== MENU RESPONSIVO =====
-    // Funcionalidade para o menu móvel (hamburger)
+        // ===== MENU RESPONSIVO =====
+        // Funcionalidade para o menu móvel (hamburger)
     const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+    const nav = document.querySelector('nav');
 
-if (menuToggle) {
+    if (menuToggle && nav) {
     menuToggle.addEventListener('click', function() {
         nav.classList.toggle('active');
     });
-}
+    }
+
     
     // Fechar o menu quando um item é clicado (para dispositivos móveis)
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             // Verificar se estamos em viewport móvel
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 768 && nav.classList.contains('active')) {
                 nav.classList.remove('active');
             }
         });
@@ -250,3 +251,8 @@ if (menuToggle) {
     
     console.log('Script inicializado com sucesso!');
 });
+
+// Adicione este script ao final do seu HTML
+document.querySelector('.menu-toggle').onclick = function() {
+  document.querySelector('nav').classList.toggle('active');
+};

@@ -618,6 +618,14 @@ footer {
 
 /* ===== MEDIA QUERIES PARA RESPONSIVIDADE ===== */
 
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white; /* se o fundo for escuro */
+}
+
+
 /* Tablets e dispositivos médios */
 @media screen and (max-width: 992px) {
     .content-wrapper {
